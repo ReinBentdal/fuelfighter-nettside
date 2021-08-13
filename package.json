@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ckeditor/ckeditor5-build-balloon-block": "file:./custom_modules/ckeditor5-build-balloon-block",
+    "@ckeditor/ckeditor5-build-balloon-block": "git+https://github.com/ReinBentdal/ckeditor5-build-balloon-block.git",
     "@ckeditor/ckeditor5-react": "^1.1.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
