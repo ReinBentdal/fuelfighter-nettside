@@ -148,7 +148,8 @@ function JoinForm() {
 	};
 
 	// const positions = ["Marketing", "Mechanical", "Autonomous", "Electrical", "Design", "Group Leader"];
-	const positions = ['Project Manager', 'Assistant project manager', 'Head of Finance', 'Technical leader', 'Systems Engineer', 'Mechanical Group Leader', 'Autonomous Group Leader', 'Electrical Group Leader', 'Design Group Leader', 'Marketing Group Leader', 'Open Application']
+	// const positions = ['Project Manager', 'Assistant project manager', 'Head of Finance', 'Technical leader', 'Systems Engineer', 'Mechanical Group Leader', 'Autonomous Group Leader', 'Electrical Group Leader', 'Design Group Leader', 'Marketing Group Leader', 'Open Application']
+	const positions = ["Head of Finance", "Mechanical Group Leader", "Design Group Leader", "Marketing Group Leader", "Mechanical Member", "Design Member", "Software Member", "Autonomous Member", "Electrical Member", "Social Media", "Web Developer", "Photo and Video", "Graphical Design", "Business Relations", "Event Manager", "Open Application"];
 
 	const handleCheckbox = (event, position) => {
 		if (event.target.value && form.selectedPositions.indexOf(position) === -1) {
@@ -188,7 +189,7 @@ function JoinForm() {
 	return (
 		<form onSubmit={handleSubmit} style={style.form} >
 			<div style={style.text.disclaimer} >
-				You will recieve an confirmation email when you submit your application. If you don`t, please send your application to post@fuelfighter.no and inform about your issue.
+				You will recieve a confirmation email when you submit your application. If you don`t, please send your application to post@fuelfighter.no and inform about your issue.
 			</div>
 			<span style={style.input.label}>Firstname</span>
 			<input
@@ -261,7 +262,7 @@ export default function Join() {
 				<Title>Position description</Title>
 
 				<PositionsContainer>
-					<PositionCard
+					{/* <PositionCard
 						position="Project Manager"
 						description="As project manager you are the main responsible for DNV Fuel Fighter’s overall progress, and you will have the overall responsibility for ensuring the success for all phases of the team’s work, from initiation to closure. This means that you will be involved in every part of the organisation, and will have to work with both technical problems, marketing and general administration. As PM you are also our public face, and will have to talk to sponsors, organizers of the SEM-event, NTNU and many others. <br/> <br/>
 						This position gives what we consider a rather unique experience in working with and managing a fairly large team and engineering project. We do not demand any previous experience in leadership, and encourage everyone interested to apply, but as the PM of a technical student organisation you should have some interest in both technical and administrative tasks. But most importantly we are looking for you who are organised, dedicated and keen to work hard to take both the car and team to the next level!"
@@ -269,15 +270,15 @@ export default function Join() {
 					<PositionCard
 						position="Assistant project manager"
 						description="The assistant project manager(APM) works closely with the project manager(PM) to ensure that the administrative side of the project runs smoothly. The PM will have a lot to do, and you will help her/him with tasks that are ultimately their responsibility. Therefore, it is important to communicate well and work together. You will also work with the head of finance when dealing with budgeting, financing and matters of economy. In team 2022 the Assistant Project Manager will be HR responsible, meaning you will make sure the members are happy and handle possible HR situations that may arise. Some of the tasks you will have is arranging recruitment, plan employe interviews, have contact with sponsors etc. Since you will be working with the PM and share a lot of the tasks, you could be a part of deciding who is doing which tasks."
-					/>
+					/> */}
 					<PositionCard
 						position="Head of Finance"
 						description="As head of Finance, you are responsible for the budget and our sponsors. You will be in contact with employees at NTNU as well as contact people from sponsors. The work consists of purchasing orders for the team, handling sponsor deals and making sure the project is keeping within its budget. One of the tasks is also working closely with the assistant project manager in trying to get new sponsorship deals, and renewing existing ones. "
 					/>
-					<PositionCard
+					{/* <PositionCard
 						position="Technical leader"
 						description="The technical leader’s most important task is to make sure that the car is ready in time for the competition. This means helping the team do their work and overcoming obstacles and making sure that the system is within the rules. You need to have a good general knowledge of each subsystem, but not necessarily every single detail. It also helps to have both experience within mechanics, electronics and software, but it is not necessary. You also have other tasks, such as reaching out to potential sponsors. "
-					/>
+					/> */}
 				</PositionsContainer>
 				<hr />
 				<PositionsContainer>
@@ -289,14 +290,14 @@ export default function Join() {
 						position="Mechanical Group Leader"
 						description="For team 2022 the mechanical team will produce our next car. This involves resin infusion of a carbon fibre monocoque, as well as modifying and improving every other aspect of the car. Examples of tasks to work on is suspension, steering, brakes or gear system. You will experience every step in the production and designing process. From designing and modelling parts and systems in CAD programs such as Fusion 360, to simulations and FEM- analysis in Hypermesh. In addition to produce every part in the workshop and composite lab."
 					/>
-					<PositionCard
+					{/* <PositionCard
 						position="Autonomous Group Leader"
 						description="As a member in the feature team Autonomous you will gain insights in how to make a car self-driving. You will work with high tech equipment as 3D Lidar, stereo camera, localization gear, components for steering and breaking the car and much more! It’s also a good experience where you can develop you coding skills, by forming algorithms to solve a task. You will not only take part in one small part of the system, but you will work together with the rest of the team trying to achieve common goals, and to get to this point all of the members need to contribute in all of the systems shaping process. The system is young, and you can by this have a lot of influence on the design."
 					/>
 					<PositionCard
 						position="Electrical Group Leader"
 						description="As leader of the electrical team, you are responsible for making sure the electrical system is ready for the competition.  You will get insight in all the electronics needed to make an electric car, this includes everything from motors to the dashboard. Improving on last years design is important to improve the efficiency of the electrical system. This includes everything from hardware design to writing software. You will also be responsible for ordering everything the team needs for electrical system. It is a great experience as you can influence the whole electrical system, and you get to help the team members when they encounter problems with their subsystems. It can be challenging at times, but it is also a lot of fun. "
-					/>
+					/> /*}
 					<PositionCard
 						position="Design Group Leader"
 						description="As a member of the design team, you will inherit the concept we have been working on for the last year, developing it further, and eventually producing the car and completing in the 2022 Shell Eco Marathon. The design process involves physical and digital testing of aerodynamics, strength, ergonomics, and aesthetics. You will be drawing, building clay-models, and modelling in Fusion 360. You will follow the concept all the way from a CAD-file to a competitive concept car, cooperate with other skilled students from a variety of professions, and work as a team to overcome the challenges along the way. "
@@ -379,7 +380,201 @@ export default function Join() {
 							</ul>" 
 					/> */}
 				</PositionsContainer>
-
+				<hr />
+				<PositionsContainer>
+					<PositionCard 
+						position="Mechanical Group" 
+						description="For the 2022 competition the team will be building a brand new monocoque for the car, and the mechanical group is in charge of making this a reality. Building a car to run with extreme efficiency requires the mechanical group to push the car to the limits of what's possible in terms of weight, friction and aerodynamics. You will experience every step in the production and designing process. From designing and modelling parts and systems in CAD programs such as Fusion 360, simulations and FEM- analysis in HyperWorks, to working with materials and production."
+					/>
+					<PositionCard 
+						position="Steering" 
+						description="The steering mechanism is the link between the driver and the front suspension, allowing the car to change direction. Over the history of the project, many interesting solutions have been tried in solving the challenge of making this as lightweight and precise as possible. The new chassis geometry requires a new such solution, which provides a lot of freedom in terms of design."
+					/>
+					<PositionCard 
+						position="Brakes" 
+						description="In order to stop the car, a four-disc hydraulic brake system is required by the regulations. This must be designed to minimize any losses under driving, as well as be able to operate autonomously during the competition."
+					/>
+					<PositionCard 
+						position="Test rig" 
+						description="For the autonomous team developing the self-driving capabilities of the car, a method is needed to test their work in real life without stopping all work on the car. A test rig is therefore being built to provide the basic functionality required for autonomous driving."
+					/>
+					<PositionCard 
+						position="Doors/Windows" 
+						description="These provide crucial functionality for the driver in the competition. Challenges include finding effective methods to interface the doors to the chassis, building a hinge mechanism which is rigid and robust, and finding new materials and production methods to keep the weight of the windows at a minimum."
+					/>
+					<PositionCard 
+						position="Front suspension" 
+						description="The front suspension is what keeps the wheels in place and rotating free of friction, and its geometry makes a big difference for the way the car handles. This will need to be adapted to the new chassis, with the possibility of finding new ways to construct the system in order to make it more lightweight, reliable and precise."
+					/>
+					<PositionCard 
+						position="Rear suspension" 
+						description="To keep all four wheels on the ground, our current car employs a trailing-arm rear suspension, which links the wheels to the chassis as well as carrying the motors, gear system, and rear brakes. A challenge for this year is to explore ways to reduce the weight of this system by using new materials and optimization tools."
+					/>
+					<PositionCard 
+						position="Chassis composite optimization/analysis" 
+						description="The heaviest part of the car is the monocoque, making it one of the most important parts to optimize as much as possible. This involves working with industry-leading FEA software to create the absolute lightest structure possible. It also requires testing of different fiber-matrix systems and core materials to find the best choice for each part of the car."
+					/>
+					<PositionCard 
+						position="Aerodynamics" 
+						description="Aerodynamic drag is one of the factors with the largest impact on a vehicles efficiency. Here you will be working with computational fluid dynamics in cooperation with the design group, in order to reshape the monocoque exterior to have the lowest drag coefficient possible."
+					/>
+					<PositionCard 
+						position="Gear system" 
+						description="Electric motors, much like internal combustion engines, have an efficiency dependent on its rotational speed. We therefore use a gear system to link the motors to the rear wheels, which lets the motors run closer to their optimal speed in different conditions. This is a part of the car that has undergone several extensive redesigns. New approaches, for example magnetic gearing, have the potential to take this further in terms of efficiency, weight and reliability."
+					/>
+					<PositionCard 
+						position="Wheels" 
+						description="When it comes to weight reduction, the wheels of a car is the area where it makes the biggest impact. Being rotational mass, these contribute to the inertia of the vehicle more than any other component. Being custom made of prepreg carbon fiber, our current design is far from heavy. However, through some creative redesign, they can potentially be made even lighter."
+					/>					
+				</PositionsContainer>
+				<hr />
+				<PositionsContainer>
+					<PositionCard 
+						position="Design Group" 
+						description="As a member of the design team, you will inherit the concept we have been working on for the last year, developing it further, and eventually producing the car and completing in the 2022 Shell Eco Marathon. The design process involves physical and digital testing of aerodynamics, strength, ergonomics, and aesthetics. You will be drawing, building clay-models, and modelling in Fusion 360. You will follow the concept all the way from a CAD-file to a competitive concept car, cooperate with other skilled students from a variety of professions, and work as a team to overcome the challenges along the way."
+					/>
+					<PositionCard 
+						position="Exterior Design" 
+						description="This group will be further developing the concept started by last year's team. This means becoming proficient in modelling in Fusion 360, and cooperating with mechanical and electrical groups to make sure everything fits together and complies with SEM rules."
+					/>
+					<PositionCard 
+						position="Steering wheel" 
+						description="The steering wheel is a major part of the interior design of a car, and needs to incorporate both aesthetics and a significant amount of technical functionality."
+					/>
+					<PositionCard 
+						position="Dashboard" 
+						description="The dashboard houses the entire instrument panel of the car, used to visually monitor the ongoing processes during operation and allowing the driver to interact with the settings of the car."
+					/>
+					<PositionCard 
+						position="Seat" 
+						description="The seat of the car, being built into the chassis of this year's concept, needs to be designed in collaboration with the mechanical group members working on the monocoque. Here, aesthetics, functionality and user experience all play a large role."
+					/>
+					<PositionCard 
+						position="Foil" 
+						description="The foil determines much of the external appearance of the car, and makes a large impact on how it is perceived. Designing one which incorporates all our sponsors for 2021/2022 in an elegant and aesthetically pleasing way is therefore important."
+					/>
+				</PositionsContainer>
+				<hr />
+				<PositionsContainer>
+					<PositionCard 
+						position="Software Group" 
+						description="The software team is responsible for the software developed for use off-track. Subsystems of this team include driving strategy and simulator."
+					/>
+					<PositionCard 
+						position="Driving strategy" 
+						description="Driving strategy aims to identify the optimal driving route that minimizes the vehicle's energy consumption. The process of identifying an optimal driving route includes finding an optimization algorithm that is able to find the most energy efficient consummation based on an arbitrary track. This also has to be visualized in a presentable way for the driver and the DNV fuel fighter team."
+					/>
+					<PositionCard 
+						position="Simulator" 
+						description="The driving simulator is a simulator that lets the driver practice driving the car without having to bring the car to a track, which can be costly and time consuming. This is aimed at helping the driver gain experience driving efficiently. The goal is to create something which interfaces with the test bench, allowing steering and pedal responses from the car itself to be used as inputs, making it as true to life as possible. It also provides a great tool for marketing and spreading awareness."
+					/>
+				</PositionsContainer>
+				<hr />
+				<PositionsContainer>
+					<PositionCard
+						position="Autonomous Group" 
+						description="As a member in the feature team Autonomous you will gain insights in how to make a car self-driving. You will work with high tech equipment such as 3D Lidar, stereo camera, localization gear, components for steering and breaking the car and much more! It�s also a good experience where you can develop you coding skills, by forming algorithms to solve a task. You will not only take part in one small part of the system, but you will work together with the rest of the team trying to achieve common goals, and to get to this point all members need to contribute in all of the systems shaping process. The system is young, and you can by this have a lot of influence on the design."
+					/>
+					<PositionCard 
+						position="SLAM/Lidar" 
+						description="To give the autonomous car a kind of vision for greater distances, a LiDAR (Light Detection and Ranging) is used. The main task for the team is to use the data published by the LiDAR and process it in a way so that the autonomous control-team can use it for steering, braking and acceleration of the car. SLAM is short for Simultaneous Localization and Mapping and is responsible for mapping an unknown environment, whilst keeping track of its position inside the map."
+					/>
+					<PositionCard 
+						position="Autonomous control"
+						description="The control system receives the desired steering angle and speed from the autonomous software on the onboard computer and makes it happen. It needs to be able to turn the steering wheel, engage the brakes,shut down if the driver manually brakes and be removable. It also receives the desired speed from the computer and transfers this data to the motorcontroller."
+					/>
+					<PositionCard 
+						position="Simulator" 
+						description="Making an autonomous car is not a straightforward task. It is a process of trial and error, and testing is therefore one of the most important and useful things to do. However, it is difficult and time consuming to test on the actual car. Therefore, we have implemented a simulator for the system which simulates the driving physics and sensors, making testing much easier to carry out."
+					/>
+					<PositionCard 
+						position="Path Tracking" 
+						description="In order to make an autonomous car, it is not only necessary to figure out where we want to drive, but also how to make the car drive where we want. This part is also known as path tracking. It is crucial to have a good path tracking system to make an autonomous car. Without it the car would drive off the road and crash."
+					/>
+					<PositionCard 
+						position="Path planning and Goal Handling"
+						description="Path planning has two responsibilities. The first is to make a path to the goal using the map and sensor data. The second is to compute the linear and angular velocity reference values that make the car follow the path. Responsibility of goal handling is to find a suitable goal for the car from the map generated by SLAM."
+					/>
+					<PositionCard 
+						position="Camera" 
+						description="The goal of the camera subsystem is to be capable of detecting lanes, obstacles and parking spots. This is done by using machine learning and other complex algorithms. The camera employed is a ZED 2 stereo camera. This makes us able to calculate the distance to different objects."
+					/>
+				</PositionsContainer>
+				<hr />
+				<PositionsContainer>
+					<PositionCard 
+						position="Electrical Group" 
+						description="For the 2022 competition the team will be building a brand new car. The electrical group is in charge of making the electrical systems for the car. Building a car to run with extreme efficiency requires the electrical group to optimize the electrical systems on every level, making all systems low power with innovative solutions. As a member of the group you will plan out your system, design circuit boards in KiCad, solder your boards, and code the microcontrollers responsible for driving your system."
+					/>
+					<PositionCard 
+						position="Motor Controller" 
+						description="The motor controller drives the car�s motors. It is one of the most crucial systems for making the car draw as little power as possible."
+					/>
+					<PositionCard 
+						position="Driver Interface" 
+						description="The driver interface is the system that the driver uses to interact with the car, and with the outside world through lights, horn and wipes. A series of circuit boards in the steering wheel and the dashboard handles the inputs from the buttons on the steering wheel, and communicates through the CANbus."
+					/>
+					<PositionCard 
+						position="Battery Management System" 
+						description="The BMS handles over-current and -voltage protection of the battery cells. It is the �guard� for the battery and makes sure that nothing critical happens while the car is in use."
+					/>
+					<PositionCard 
+						position="Power Distribution" 
+						description="The power distribution system makes sure that all the different components and subsystems get the correct voltage and enough power to work properly."
+					/>
+					<PositionCard 
+						position="Telemetry" 
+						description="The telemetry is responsible for transmitting data from the driver inputs and the car�s sensor network. The data is transmitted to a ground station, where it is visualized and analyzed."
+					/>
+					<PositionCard 
+						position="Sensor Network" 
+						description="The sensor network is responsible for collecting and monitoring data from the car. This data includes power consumption, vibrations, temperatures, battery state and motor state. The data is transmitted to a ground station via the telemetry system, where it is visualized and analyzed."
+					/>
+					<PositionCard 
+						position="Data Visualization"
+						description="The data visualization subgroup is responsible for visualizing data from the sensor network and the driver inputs, which is received through the telemetry system. The visualization is done in an intuitive and descriptive manner, so that analyzing the performance of the car is easy."
+					/>
+					<PositionCard 
+						position="Embedded software" 
+						description="The embedded software is used for the circuit boards in the car that has microcontrollers. It includes a hardware abstraction level (HAL) and a bootloader, and revolves around microcontroller drivers and the CANbus."
+					/>
+					<PositionCard 
+						position="Test Bench"
+						description="The electrical test bench subgroup is responsible for the electrical components on the test bench. The test bench simulates rolling resistance and is used to test the car off-track."
+					/>
+				</PositionsContainer>
+				<hr />
+				<PositionsContainer>
+					<PositionCard 
+						position="Marketing Group" 
+						description="As a member of the marketing group you are responsible for making DNV Fuel Fighter visible to the outside. This includes creating a monthly newsletter, taking photos and videos, and updating our followers on Facebook, Instagram and LinkedIn about what we are up to. If you are interested in subjects like photography, online marketing strategies, web development or graphical design, the marketing team may be the place for you!"
+					/>
+					<PositionCard 
+						position="Graphical Designer"
+						description="As the graphical designer of the team, you are responsible for the team's graphical profile. This means everything from the design of our logo to the visuals of our social media"
+					/>
+					<PositionCard 
+						position="Photo and Video"
+						descriptions="In order to share out progress and activities with our followers, we need to capture and share moments of our production on our social media. The photo and video responsible is in charge of taking pictures and videos of these moments. Are you experienced with a camera or interested in learning about photography, this position may be for you."
+					/>
+					<PositionCard 
+						position="Web Developer"
+						description="The web developer is responsible for keeping our website functional and up to date. You will be learning and using languages such as React JS and PHP."
+					/>
+					<PositionCard 
+						position="Event Manager"
+						description="The event manager is responsible for social and public events of the team. This means booking venues, restaurants or go-kart tracks for the team."
+					/>
+					<PositionCard 
+						position="Business Relations"
+						description="As a voluntary organization we live on sponsorships and possible prize money. As resposible for business relations you will contact businesses and other organizations to find sponsors and collaborators, and maintain old relations. If you are studying economics or administration this is a great experience and practice"
+					/>
+					<PositionCard 
+						position="Social Media"
+						description="Social media platforms such as Facebook and Instagram are really important to help market the progress of DNV Fuel Fighter. Our social media responsible creates posts and stories to interact with our followers."
+					/>
+				</PositionsContainer>
+				
 				<Title>Apply</Title>
 				<JoinForm />
 
